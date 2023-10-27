@@ -1,5 +1,8 @@
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { Button, buttonVariants } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -15,6 +18,16 @@ export default function Home() {
         Alpha Pdf allows you to have conversation with your document, simply ask
         question and it will give you answers.
       </p>
+      <Link
+        href='/'
+        target='_blank'
+        className={buttonVariants({
+          size: 'lg',
+          className: 'mt-5',
+        })}
+      >
+        Get Started <ArrowRight className=' ml-2 h-5 w-5' />
+      </Link>
     </MaxWidthWrapper>
   )
 }
